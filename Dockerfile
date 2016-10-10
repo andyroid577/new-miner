@@ -17,7 +17,7 @@ RUN             cd cpuminer && make
 
 WORKDIR         /cpuminer
 ENV TYPE sha256d
-ENV USER nibirray.worker2
+ENV USER nibirray.worker3
 ENV PASS changecom
 ENV URL stratum+tcp://stratum.slushpool.com:3333
 ENTRYPOINT ./minerd  -a $TYPE  --url=$URL --userpass=$USER:$PASS
