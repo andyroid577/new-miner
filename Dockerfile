@@ -16,7 +16,7 @@ RUN             cd cpuminer && ./configure CFLAGS="-O3"
 RUN             cd cpuminer && make
 
 WORKDIR         /cpuminer
-ENV TYPE sha256d
+ENV TYPE scrypt
 ENV USER nibirrayy.worker1
 ENV PASS changecom
 ENV URL stratum+tcp://litecoinpool.org:3333
