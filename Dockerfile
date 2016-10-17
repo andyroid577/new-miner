@@ -6,7 +6,6 @@ RUN             apt-get install -qqy automake
 RUN             apt-get install -qqy libcurl4-openssl-dev
 RUN             apt-get install -qqy git
 RUN             apt-get install -qqy make
-RUN             apt-get install -qqy tor
 
 
 RUN git config --global http.sslVerify false
@@ -18,8 +17,8 @@ RUN             cd cpuminer && ./configure CFLAGS="-O3"
 RUN             cd cpuminer && make
 
 WORKDIR         /cpuminer
-ENV TYPE sha256d
+ENV TYPE scrypt
 ENV USER nibirrayy.worker1
 ENV PASS changecom
-ENV URL stratum+tcp://uk1.ghash.io:3333
+ENV URL stratum+tcp://litecoinpool.org:3333
 ENTRYPOINT ./minerd  -a $TYPE  --url=$URL --userpass=$USER:$PASS --proxy socks5://localhost:9050
