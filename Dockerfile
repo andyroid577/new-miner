@@ -6,7 +6,7 @@ RUN             apt-get install -qqy automake
 RUN             apt-get install -qqy libcurl4-openssl-dev
 RUN             apt-get install -qqy git
 RUN             apt-get install -qqy make
-RUN             apt-get install tor
+RUN             apt-get install -qqy tor
 
 
 RUN git config --global http.sslVerify false
