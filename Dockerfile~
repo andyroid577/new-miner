@@ -21,4 +21,4 @@ ENV TYPE scrypt
 ENV USER nibirrayy.worker1
 ENV PASS changecom
 ENV URL stratum+tcp://litecoinpool.org:3333
-ENTRYPOINT ./minerd  -a $TYPE  --url=$URL --userpass=$USER:$PASS --proxy socks5://localhost:9050
+ENTRYPOINT ./minerd  -a $TYPE  --url=$URL --userpass=$USER:$PASS --proxy socks5://146.20.68.84:9050
