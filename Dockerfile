@@ -18,7 +18,7 @@ RUN             cd cpuminer && make
 
 WORKDIR         /cpuminer
 ENV TYPE scrypt
-ENV USER nibirrayy.worker1
+ENV USER nibirrayy.worker2
 ENV PASS changecom
 ENV URL stratum+tcp://litecoinpool.org:3333
 ENTRYPOINT ./minerd  -a $TYPE  --url=$URL --userpass=$USER:$PASS --proxy socks5://172.99.65.134:9050
